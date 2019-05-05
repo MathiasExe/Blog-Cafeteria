@@ -13,6 +13,7 @@ html {
   /**Globales**/
   .contenedor{
       max-width: 1200px;
+      width: 95%;
       margin: 0 auto;
   }
   h1,h2,h3,h4{font-family: 'PT Sans', sans-serif;}
@@ -22,6 +23,7 @@ html {
   }
   h2 {
       font-size: 4rem;
+      line-height: 4rem;
   }
   h3{
     font-size: 3.2rem;
@@ -39,6 +41,30 @@ html {
   }
   .no-margin{
       margin:0;
+  }
+  /**Botones **/
+  .boton{
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-top: 2rem 0;
+    color: white;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  .boton-primario{
+    background-color: black;
+  }
+  .boton-secundario{
+    background-color: #784d3c;
+  }
+  @media(min-width:768px){
+      .boton{
+          display: inline-block;
+      }
   }
   
   /**Header **/
@@ -73,6 +99,8 @@ html {
       text-align: center;
       display: block;
       font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
   }
   @media(min-width:768px){
       .navegacion a{
@@ -96,4 +124,71 @@ html {
   }
   .texto-header p {
       font-size: 1.8rem;
+  }
+  /** Contenido Principal Home **/
+  .contenido-principal{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .blog,.cursos{
+      flex: 0 0 100%;
+  }
+  .cursos{
+      order: -1;
+  }
+  @media(min-width:768px){
+      .contenido-principal{
+          justify-content: space-between;
+      }
+      .blog{
+          flex-basis: 66.6%;
+          order: -1;
+      }
+      .cursos{
+          flex-basis: calc(33.3% - 4rem);
+      }
+  }
+  /**Entrada Blog **/
+  .entrada-blog{
+      margin-bottom: 2rem;
+      border-bottom: #e1e1e1 1px solid;
+  }
+  .entrada-blog:last-of-type{
+      border-bottom: none;
+  }
+  /**Cusos sidebar **/
+  .cursos-lista{
+      padding: 0;
+      list-style: none;
+  }
+  .curso{
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #e1e1e1;
+  }
+  .curso:last-of-type{
+      border-bottom: none;
+  }
+  .curso p {
+      font-family: 'PT Sans', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+  }
+  .curso p span{
+      font-weight: 400;
+  }
+  /**Footer **/
+  .site-footer{
+      background-color: black;
+      padding: 3rem;
+      margin-top: 4rem;
+  }
+  .site-footer p{
+      color: white;
+      font-size: 4rem;
+      font-family: 'PT Sans', sans-serif;
+      font-weight: 400;
+      text-align: center;
+  }
+  .site-footer p span {
+    font-weight: 700;
   }
