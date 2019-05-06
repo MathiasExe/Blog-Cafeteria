@@ -42,6 +42,32 @@ html {
   .no-margin{
       margin:0;
   }
+  /**Grid **/
+  @media(min-width:768px){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .columnas-4{
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+    .columnas-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 2rem);
+    }
+    .columnas-10{
+        flex: 0 0 calc(83.3% - 1rem );
+    }
+    .columnas-12{
+        flex: 0 0 100%;
+    }
+    .centrar-columnas{
+        justify-content: center;
+    }
+  }
   /**Botones **/
   .boton{
     display: block;
@@ -54,6 +80,11 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2rem;
+    flex: 0 0 100%;
+    border-color: transparent;
+  }
+  .boton:hover{
+    cursor: pointer;
   }
   .boton-primario{
     background-color: black;
@@ -64,6 +95,7 @@ html {
   @media(min-width:768px){
       .boton{
           display: inline-block;
+          flex: 0 0 auto;
       }
   }
   
@@ -162,6 +194,7 @@ html {
       list-style: none;
   }
   .curso{
+      padding-top: 2rem;
       padding-bottom: 3rem;
       border-bottom: 1px solid #e1e1e1;
   }
@@ -173,9 +206,11 @@ html {
       font-weight: 700;
       font-size: 2rem;
   }
-  .curso p span{
+  .curso p span, 
+  .curso .descripcion{
       font-weight: 400;
   }
+  
   /**Footer **/
   .site-footer{
       background-color: black;
@@ -192,3 +227,34 @@ html {
   .site-footer p span {
     font-weight: 700;
   }
+  /**Contacto **/
+  .formulario-contacto{
+      background-color: #ffff;
+      padding: 5rem;
+  }
+@media(min-width:768px){
+    .formulario-contacto{
+        margin-top: -10rem;
+    }
+}
+.formulario-contacto .campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.formulario-contacto .campo label{
+    flex: 0 0 8rem;
+}
+.formulario-contacto .campo input:not([type="submit"]),.formulario-contacto textarea{
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+.formulario-contacto textarea{
+    height: 20rem;
+}
+.formulario-contacto .enviar{
+    display: flex;
+    justify-content: flex-end;
+    
+}
